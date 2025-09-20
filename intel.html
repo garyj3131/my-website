@@ -1,59 +1,170 @@
-<header>
-  <div class="logo">
-    <div class="brand-mark">GG</div>
-    <div>
-      <div style="font-weight:700">Grow Your Web</div>
-      <div style="font-size:12px;color:var(--muted)">Websites For Serious Businesses</div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Websites Make or Break Your Business</title>
+  <meta name="description" content="Make the most growth you’ve seen in your business. Professional, modern websites that convert visitors into customers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#0b0d11;
+      --panel:#0f1216;
+      --muted:#9aa0a6;
+      --accent:#c9a94a;
+      --white:#eceff1;
+      --glass: rgba(255,255,255,0.04);
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body {
+      margin:0;
+      background: radial-gradient(800px 400px at 10% 10%, rgba(201,169,74,0.06), transparent 6%),
+                  radial-gradient(600px 300px at 90% 90%, rgba(255,255,255,0.02), transparent 6%),
+                  var(--bg);
+      color:var(--white);
+      line-height:1.5;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    header {
+      display:flex; justify-content:space-between; align-items:center;
+      padding:28px 40px;
+      border-bottom:1px solid rgba(255,255,255,0.03);
+      position:sticky; top:0; backdrop-filter: blur(4px);
+    }
+    .logo { display:flex; align-items:center; gap:12px; }
+    .brand-mark {
+      width:46px; height:46px; border-radius:8px;
+      background: linear-gradient(135deg, rgba(201,169,74,0.95), rgba(255,255,255,0.06));
+      display:flex; align-items:center; justify-content:center;
+      color:#0a0a0a; font-weight:700; font-family:"Playfair Display", serif;
+    }
+    nav a {
+      color:var(--muted); text-decoration:none; margin-left:20px; font-weight:600;
+    }
+    nav a.cta {
+      background: linear-gradient(90deg, rgba(201,169,74,0.14), rgba(201,169,74,0.06));
+      padding:8px 14px; border-radius:8px;
+      color:var(--white); border:1px solid rgba(201,169,74,0.18);
+    }
+
+    .hero {
+      display:grid; grid-template-columns:1fr 520px; gap:40px; align-items:center;
+      padding:64px 40px; max-width:1200px; margin:0 auto;
+    }
+    .eyebrow { color:var(--muted); text-transform:uppercase; font-size:12px; letter-spacing:1px; margin-bottom:14px; }
+    h1 {
+      margin:0 0 14px 0;
+      font-family:"Playfair Display", serif;
+      font-weight:600; font-size:36px; color:var(--white);
+    }
+    p.lead { color:var(--muted); margin:0 0 26px 0; font-size:16px; max-width:44ch; }
+    .actions { display:flex; gap:12px; margin-top:8px; }
+    .btn {
+      background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--white);
+      padding:12px 18px; border-radius:10px; text-decoration:none;
+      font-weight:600; display:inline-flex; align-items:center; gap:10px;
+    }
+    .btn.primary {
+      background: linear-gradient(90deg, var(--accent), rgba(201,169,74,0.85));
+      color:#071013; border:none; box-shadow:0 6px 18px rgba(0,0,0,0.5);
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:14px; padding:18px;
+      border:1px solid rgba(255,255,255,0.03);
+      box-shadow:0 6px 30px rgba(2,6,12,0.6);
+    }
+    .visual {
+      border-radius:12px; overflow:hidden; height:380px; background:var(--panel);
+    }
+    .visual img { width:100%; height:100%; object-fit:cover; }
+
+    .features { display:flex; gap:14px; margin-top:26px; }
+    .feature { flex:1; padding:16px; border-radius:10px; background:var(--glass); border:1px solid rgba(255,255,255,0.03) }
+    .feature h4 { margin:0 0 8px 0; font-size:15px }
+    .feature p { margin:0; color:var(--muted); font-size:14px }
+
+    footer {
+      padding:28px 40px; color:var(--muted);
+      display:flex; justify-content:space-between; align-items:center;
+      border-top:1px solid rgba(255,255,255,0.03)
+    }
+    .small { font-size:13px }
+
+    @media (max-width:900px){
+      .hero { grid-template-columns:1fr; padding:40px 20px; gap:20px }
+      .visual { height:300px }
+      header { padding:18px 20px }
+      nav a { margin-left:12px }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="brand-mark">GG</div>
+      <div>
+        <div style="font-weight:700">Garet Grow Web</div>
+        <div style="font-size:12px;color:var(--muted)">Websites for serious businesses</div>
+      </div>
     </div>
-  </div>
-  <nav>
-    <a href="https://codepen.io/Garet-G/pen/QwjYejv">Home</a>
-    <a href="https://codepen.io/Garet-G/pen/JoYxgYw">Why a Website?</a>
-    <a class="cta" href="mailto:garetg31.31@gmail.com?subject=Website%20Inquiry%20—%20Let%27s%20grow%20your%20business&body=Hi%20Garet%2C%0A%0AI%27m%20interested%20in%20building%20a%20website%20for%20my%20business.%20Here%20are%20some%20details%3A%0A%0AName%3A%0ABusiness%3A%0AWebsite%20goal%3A%0AEstimated%20budget%3A%0ABest%20time%20to%20contact%3A%0A%0AThanks%2C%0A">
-      Let’s Grow Your Business
-    </a>
-  </nav>
-</header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">Why a Website?</a>
+      <a class="cta" href="mailto:garetg31.31@gmail.com?subject=Website%20Inquiry%20—%20Let%27s%20grow%20your%20business&body=Hi%20Garet%2C%0A%0AI%27m%20interested%20in%20building%20a%20website%20for%20my%20business.%20Here%20are%20some%20details%3A%0A%0AName%3A%0ABusiness%3A%0AWebsite%20goal%3A%0AEstimated%20budget%3A%0ABest%20time%20to%20contact%3A%0A%0AThanks%2C%0A">Let’s grow your business</a>
+    </nav>
+  </header>
 
-<main>
-  <section class="hero">
-    <div>
-      <div class="eyebrow">Websites Make or Break Your Business</div>
-      <h1>Make THE MOST Growth You’ve Seen In Your Business, Just Like That.</h1>
-      <p class="lead">A professional website isn’t just presence — it’s a sales engine. We create clean, fast, and conversion-focused sites that represent your brand with confidence and drive measurable results.</p>
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Websites Make or Break Your Business</div>
+        <h1>Make the most growth you’ve seen in your business, just like that.</h1>
+        <p class="lead">A professional website isn’t just presence — it’s a sales engine. We create clean, fast, and conversion-focused sites that represent your brand with confidence and drive measurable results.</p>
 
-      <div class="actions">
-        <a class="btn primary" href="mailto:garetg31.31@gmail.com?subject=Website%20Inquiry%20—%20Let%27s%20grow%20your%20business&body=Hi%20Garet%2C%0A%0AI%27m%20interested%20in%20building%20a%20website%20for%20my%20business.%20Here%20are%20some%20details%3A%0A%0AName%3A%0ABusiness%3A%0AWebsite%20goal%3A%0AEstimated%20budget%3A%0ABest%20time%20to%20contact%3A%0A%0AThanks%2C%0A">
-          ✉ Let’s Grow Your Business
-        </a>
-        <a class="btn" href="#">Why a Website?</a>
-      </div>
-
-      <div class="features">
-        <div class="feature card">
-          <h4>Design with purpose</h4>
-          <p>Elegant layouts that reflect credibility and attract the right clientele.</p>
+        <div class="actions">
+          <a class="btn primary" href="mailto:garetg31.31@gmail.com?subject=Website%20Inquiry%20—%20Let%27s%20grow%20your%20business&body=Hi%20Garet%2C%0A%0AI%27m%20interested%20in%20building%20a%20website%20for%20my%20business.%20Here%20are%20some%20details%3A%0A%0AName%3A%0ABusiness%3A%0AWebsite%20goal%3A%0AEstimated%20budget%3A%0ABest%20time%20to%20contact%3A%0A%0AThanks%2C%0A">
+            ✉ Let’s grow your business
+          </a>
+          <a class="btn" href="about.html">Why a Website?</a>
         </div>
-        <div class="feature card">
-          <h4>Conversion focus</h4>
-          <p>Calls-to-action and user flows designed to capture leads and sales.</p>
-        </div>
-        <div class="feature card">
-          <h4>Fast & secure</h4>
-          <p>Optimized for speed, mobile, and HTTPS so you look professional from day one.</p>
+
+        <div class="features">
+          <div class="feature card">
+            <h4>Design with purpose</h4>
+            <p>Elegant layouts that reflect credibility and attract the right clientele.</p>
+          </div>
+          <div class="feature card">
+            <h4>Conversion focus</h4>
+            <p>Calls-to-action and user flows designed to capture leads and sales.</p>
+          </div>
+          <div class="feature card">
+            <h4>Fast & secure</h4>
+            <p>Optimized for speed, mobile, and HTTPS so you look professional from day one.</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <aside>
-      <div class="card visual">
-        <img src="https://source.unsplash.com/900x700/?business,team,website,office" alt="People collaborating on websites" />
-      </div>
-    </aside>
-  </section>
-</main>
+      <aside>
+        <div class="card visual">
+          <img src="https://source.unsplash.com/900x700/?business,team,website,office" alt="People collaborating on websites" />
+        </div>
+      </aside>
+    </section>
+  </main>
 
-<footer>
-  <div class="small">© <span id="year"></span> The Grow Web — Professional websites that perform.</div>
-  <div class="small">Email: <a href="mailto:garetg31.31@gmail.com" style="color:var(--muted); text-decoration:none">garetg31.31@gmail.com</a></div>
-</footer>
+  <footer>
+    <div class="small">© <span id="year"></span> Garet Grow Web — Professional websites that perform.</div>
+    <div class="small">Email: <a href="mailto:garetg31.31@gmail.com" style="color:var(--muted); text-decoration:none">garetg31.31@gmail.com</a></div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
