@@ -1,90 +1,72 @@
-:root {
-  --bg:#0b0d11;
-  --panel:#0f1216;
-  --muted:#9aa0a6;
-  --accent:#c9a94a;
-  --white:#eceff1;
-  --glass: rgba(255,255,255,0.04);
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-}
-*{box-sizing:border-box}
-html,body{height:100%}
-body {
-  margin:0;
-  background: radial-gradient(800px 400px at 10% 10%, rgba(201,169,74,0.06), transparent 6%),
-              radial-gradient(600px 300px at 90% 90%, rgba(255,255,255,0.02), transparent 6%),
-              var(--bg);
-  color:var(--white);
-  line-height:1.5;
-}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Why a Website? — Garet Grow Web</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#0b0d11; --panel:#0f1216; --muted:#9aa0a6; --accent:#c9a94a; --white:#eceff1;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    body { margin:0; background:var(--bg); color:var(--white); padding:28px; }
+    .container { max-width:900px; margin:20px auto; }
+    .card { background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+            padding:26px; border-radius:12px; border:1px solid rgba(255,255,255,0.03) }
+    h1 { font-size:26px; margin:0 0 10px 0 }
+    p { color:var(--muted); line-height:1.6 }
+    ul { color:var(--muted); line-height:1.6 }
+    .cta { margin-top:18px; display:flex; gap:12px }
+    .btn { padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:600;
+           color:var(--white); border:1px solid rgba(255,255,255,0.03) }
+    .btn.primary { background:linear-gradient(90deg,var(--accent), rgba(201,169,74,0.85));
+                   color:#071013; border:none }
+    header { display:flex; justify-content:space-between; align-items:center; margin-bottom:18px }
+    a { color:var(--accent); text-decoration:none }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div style="font-weight:700">Garet Grow Web</div>
+      <nav><a href="index.html">Home</a></nav>
+    </header>
 
-header {
-  display:flex; justify-content:space-between; align-items:center;
-  padding:28px 40px;
-  border-bottom:1px solid rgba(255,255,255,0.03);
-  position:sticky; top:0; backdrop-filter: blur(4px);
-}
-.logo { display:flex; align-items:center; gap:12px; }
-.brand-mark {
-  width:46px; height:46px; border-radius:8px;
-  background: linear-gradient(135deg, rgba(201,169,74,0.95), rgba(255,255,255,0.06));
-  display:flex; align-items:center; justify-content:center;
-  color:#0a0a0a; font-weight:700; font-family:"Playfair Display", serif;
-}
-nav a {
-  color:var(--muted); text-decoration:none; margin-left:20px; font-weight:600;
-}
-nav a.cta {
-  background: linear-gradient(90deg, rgba(201,169,74,0.14), rgba(201,169,74,0.06));
-  padding:8px 14px; border-radius:8px;
-  color:var(--white); border:1px solid rgba(201,169,74,0.18);
-}
+    <div class="card">
+      <h1>Why a website is essential for every business</h1>
+      <p>
+        Every business competes for attention. A professionally designed website is where you control the conversation — your story, your services, and the path to hire you. For most customers, your website is the first impression they’ll form. If it looks amateur or is hard to use, you lose trust and sales.
+      </p>
 
-.hero {
-  display:grid; grid-template-columns:1fr 520px; gap:40px; align-items:center;
-  padding:64px 40px; max-width:1200px; margin:0 auto;
-}
-.eyebrow { color:var(--muted); text-transform:uppercase; font-size:12px; margin-bottom:14px; }
-h1 {
-  margin:0 0 14px 0;
-  font-family:"Playfair Display", serif;
-  font-weight:600; font-size:36px; color:var(--white);
-}
-p.lead { color:var(--muted); margin:0 0 26px 0; font-size:16px; max-width:44ch; }
-.actions { display:flex; gap:12px; margin-top:8px; }
-.btn {
-  background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--white);
-  padding:12px 18px; border-radius:10px; text-decoration:none;
-  font-weight:600; display:inline-flex; align-items:center; gap:10px;
-}
-.btn.primary {
-  background: linear-gradient(90deg, var(--accent), rgba(201,169,74,0.85));
-  color:#071013; border:none; box-shadow:0 6px 18px rgba(0,0,0,0.5);
-}
+      <p>A good website does more than look nice. It:</p>
+      <ul>
+        <li><strong>Attracts qualified customers</strong> — targeted pages highlight your services to the right people.</li>
+        <li><strong>Builds credibility</strong> — a professional site signals stability and trustworthiness.</li>
+        <li><strong>Converts visitors into leads</strong> — clear calls-to-action and fast load times drive inquiries.</li>
+        <li><strong>Works for you 24/7</strong> — a site brings leads even when your office is closed.</li>
+      </ul>
 
-.card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  border-radius:14px; padding:18px;
-  border:1px solid rgba(255,255,255,0.03);
-}
-.visual { border-radius:12px; overflow:hidden; height:380px; background:var(--panel); }
-.visual img { width:100%; height:100%; object-fit:cover; }
+      <p>
+        In short: if you want to compete and win, being online with a professional site is no longer optional — it’s expected. Let’s talk about building a site that represents your business at its best.
+      </p>
 
-.features { display:flex; gap:14px; margin-top:26px; }
-.feature { flex:1; padding:16px; border-radius:10px; background:var(--glass); border:1px solid rgba(255,255,255,0.03) }
-.feature h4 { margin:0 0 8px 0; font-size:15px }
-.feature p { margin:0; color:var(--muted); font-size:14px }
+      <div class="cta">
+        <a class="btn primary" href="mailto:garetg31.31@gmail.com?subject=Interested%20in%20a%20website&body=Hi%20Garet%2C%0A%0AI%27d%20like%20to%20discuss%20a%20website%20for%20my%20business.%0A%0AThanks%2C">
+          Email me
+        </a>
+        <a class="btn" href="index.html">Back to Home</a>
+      </div>
+    </div>
 
-footer {
-  padding:28px 40px; color:var(--muted);
-  display:flex; justify-content:space-between; align-items:center;
-  border-top:1px solid rgba(255,255,255,0.03)
-}
-.small { font-size:13px }
+    <footer style="color:var(--muted); margin-top:18px; font-size:13px">
+      © <span id="year2"></span> Garet Grow Web •
+      <a href="mailto:garetg31.31@gmail.com">garetg31.31@gmail.com</a>
+    </footer>
+  </div>
 
-@media (max-width:900px){
-  .hero { grid-template-columns:1fr; padding:40px 20px; gap:20px }
-  .visual { height:300px }
-  header { padding:18px 20px }
-  nav a { margin-left:12px }
-}
+  <script>
+    document.getElementById('year2').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
